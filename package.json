@@ -1,7 +1,7 @@
 {
   "name": "react-preview-a4",
   "version": "0.1.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "A responsive print preview in A4 format",
   "homepage": "https://diagoriente.beta.gouv.fr",
   "repository": {
     "type": "git",
