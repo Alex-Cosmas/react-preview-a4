@@ -2,8 +2,8 @@ const path = require("path");
 
 module.exports = {
   framework: "@storybook/react",
-  stories: ["../src/**/*.stories.tsx", "../src/**/*.stories.jsx"],
-  addons: [],
+  stories: ["../src/**/**.stories.tsx"],
+  addons: ["@storybook/preset-create-react-app"],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,

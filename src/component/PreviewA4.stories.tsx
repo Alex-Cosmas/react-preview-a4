@@ -1,6 +1,7 @@
 import React from "react";
 import PreviewA4 from "./PreviewA4";
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
   title: "PreviewA4",
 };

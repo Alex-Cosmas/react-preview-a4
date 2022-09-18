@@ -1,3 +1,3 @@
-import PreviewA4 from "./composant/PreviewA4";
+import PreviewA4 from "./component/PreviewA4";
 
 export { PreviewA4 };
