@@ -25,6 +25,7 @@
   ],
   "private": false,
   "dependencies": {
+    "@storybook/builder-webpack5": "^7.0.0-alpha.33",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -40,11 +41,12 @@
     "@babel/core": "^7.19.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@storybook/cli": "^6.5.12",
-    "@storybook/react": "^6.5.12",
+    "@storybook/cli": "^7.0.0-alpha.33",
+    "@storybook/react": "^7.0.0-alpha.33",
     "@types/react": "^18.0.20",
     "babel-loader": "^8.2.5",
     "babel-preset-react-app": "^10.0.1",
+    "dotenv-webpack": "^8.0.1",
     "node-sass": "^7.0.3",
     "prettier": "2.7.1",
     "react": "^18.2.0",
@@ -53,7 +55,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.0",
-    "sass-loader": "^13.0.2"
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.74.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
