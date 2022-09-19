@@ -25,12 +25,9 @@
   ],
   "private": false,
   "dependencies": {
-    "@storybook/builder-webpack5": "^7.0.0-alpha.33",
+    "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/preset-create-react-app": "^4.1.2",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.11.59",
     "@types/react-dom": "^18.0.6",
     "react-scripts": "5.0.1",
@@ -41,12 +38,25 @@
     "@babel/core": "^7.19.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@storybook/cli": "^7.0.0-alpha.33",
-    "@storybook/react": "^7.0.0-alpha.33",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/jest": "^0.0.10",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.0.3",
     "@types/react": "^18.0.20",
     "babel-loader": "^8.2.5",
     "babel-preset-react-app": "^10.0.1",
     "dotenv-webpack": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.0.3",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^29.0.3",
     "node-sass": "^7.0.3",
     "prettier": "2.7.1",
     "react": "^18.2.0",
@@ -56,6 +66,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.0",
     "sass-loader": "^13.0.2",
+    "ts-jest": "^29.0.1",
     "webpack": "^5.74.0"
   },
   "peerDependencies": {
@@ -65,10 +76,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "storybook:export": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "eslintConfig": {
     "extends": [

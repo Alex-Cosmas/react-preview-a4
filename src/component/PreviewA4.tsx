@@ -11,12 +11,14 @@ export interface PreviewA4Props {
   children: any;
 }
 
-const PreviewA4: React.FC<PreviewA4Props> = ({
-  format = false,
-  allowOverflow = false,
-  print = false,
-  children,
-}) => {
+const PreviewA4: React.FC<PreviewA4Props> = (props) => {
+  const {
+    format = false,
+    allowOverflow = false,
+    print = false,
+    children,
+  } = props;
+
   const refPreview = useRef<any>(null);
   const refDivTransformed = useRef<HTMLDivElement>(null);
 
@@ -30,23 +32,23 @@ const PreviewA4: React.FC<PreviewA4Props> = ({
   const node = (
     <div
       ref={refPreview}
-      className="template--wrapperPreview"
+      className="template-preview"
       style={{
         minHeight: innerHeight,
       }}
     >
       <div
         ref={refDivTransformed}
-        className="template-transformed"
+        className="template-container"
         style={{
           transform: `scale(${outerWidth / 794}) translateX(-50%)`,
         }}
       >
         <div
-          className={
-            allowOverflow ? "template--preview-dynamic" : "template--preview"
-          }
+          className="template-content"
+          data-testid={print ? "print" : "no-print"}
           style={{
+            overflow: allowOverflow ? "visible" : "hidden",
             padding: !print ? "24px" : "0",
           }}
         >
