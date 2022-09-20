@@ -49,6 +49,7 @@ const PreviewA4: React.FC<PreviewA4Props> = (props) => {
           data-testid={print ? "print" : "no-print"}
           style={{
             overflow: allowOverflow ? "visible" : "hidden",
+            ...(allowOverflow ? { minHeight: "1123px" } : { height: "1123px" }),
             padding: !print ? "24px" : "0",
           }}
         >

@@ -1,5 +1,5 @@
 {
-  "name": "react-preview-a4",
+  "name": "@diagoriente/react-preview-a4",
   "version": "0.1.0",
   "description": "A responsive print preview in A4 format",
   "homepage": "https://diagoriente.beta.gouv.fr",
