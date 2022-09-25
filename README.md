@@ -10,7 +10,7 @@
 
 ## Installation
 
-To install, you can use [npm](https://npmjs.org/):
+To install, you can use [npm](https://www.npmjs.com/package/@diagoriente/react-preview-a4):
 
     $ npm install --save @diagoriente/react-preview-a4
     $ yarn add @diagoriente/react-preview-a4
@@ -44,4 +44,4 @@ local development server using `npm start` or `yarn start`.
 
 # Demo
 
-There is a demo hosted on [CodeSandbox]().
+There is a demo hosted on [CodeSandbox](https://codesandbox.io/s/diagoriente-react-preview-a4-22s03z?file=/src/App.js).
