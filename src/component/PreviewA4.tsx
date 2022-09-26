@@ -5,19 +5,13 @@ import useRefDimensions from "../hooks/useRefDimensions";
 import "./style.css";
 
 export interface PreviewA4Props {
-  format?: boolean;
   allowOverflow?: boolean;
   print?: boolean;
   children: any;
 }
 
 const PreviewA4: React.FC<PreviewA4Props> = (props) => {
-  const {
-    format = false,
-    allowOverflow = false,
-    print = false,
-    children,
-  } = props;
+  const { allowOverflow = false, print = false, children } = props;
 
   const refPreview = useRef<any>(null);
   const refDivTransformed = useRef<HTMLDivElement>(null);
@@ -29,7 +23,7 @@ const PreviewA4: React.FC<PreviewA4Props> = (props) => {
     []
   );
 
-  const node = (
+  return (
     <div
       ref={refPreview}
       className="template-preview"
@@ -57,12 +51,6 @@ const PreviewA4: React.FC<PreviewA4Props> = (props) => {
         </div>
       </div>
     </div>
-  );
-
-  return format ? (
-    <div style={{ width: "21cm", minHeight: "29.7cm" }}>{node}</div>
-  ) : (
-    node
   );
 };
 
