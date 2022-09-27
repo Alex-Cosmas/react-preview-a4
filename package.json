@@ -25,7 +25,10 @@
     "build"
   ],
   "private": false,
-  "dependencies": {},
+  "dependencies": {
+    "@modular-css/rollup": "^28.2.3",
+    "rollup-plugin-import-css": "^3.0.3"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

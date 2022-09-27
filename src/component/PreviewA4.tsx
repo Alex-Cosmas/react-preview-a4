@@ -1,8 +1,5 @@
 import React, { useMemo, useRef } from "react";
-
 import useRefDimensions from "../hooks/useRefDimensions";
-
-import "./style.css";
 
 export interface PreviewA4Props {
   allowOverflow?: boolean;
@@ -26,25 +23,34 @@ const PreviewA4: React.FC<PreviewA4Props> = (props) => {
   return (
     <div
       ref={refPreview}
-      className="template-preview"
       style={{
+        position: "relative",
+        aspectRatio: "21/29.7",
+        maxWidth: "100%",
+        height: "auto",
         minHeight: innerHeight,
       }}
     >
       <div
         ref={refDivTransformed}
-        className="template-container"
         style={{
           transform: `scale(${outerWidth / 794}) translateX(-50%)`,
+          display: "flex",
+          position: "absolute",
+          left: "50%",
+          top: 0,
+          background: "white",
+          transformOrigin: "top left",
         }}
       >
         <div
-          className="template-content"
           data-testid={print ? "print" : "no-print"}
           style={{
             overflow: allowOverflow ? "visible" : "hidden",
             ...(allowOverflow ? { minHeight: "1123px" } : { height: "1123px" }),
             padding: !print ? "24px" : "0",
+            width: "794px",
+            height: "1123px",
           }}
         >
           {children}
