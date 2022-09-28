@@ -18,18 +18,6 @@ export const Default = () => (
   </PreviewA4>
 );
 
-export const WithFormatA4 = () => (
-  <PreviewA4 format>
-    <h1>Bonjour à tous</h1>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, maxime ea
-      exercitationem tempore error distinctio molestias suscipit expedita
-      tenetur incidunt reprehenderit quisquam iste quasi rerum id nulla nemo?
-      Nemo, perspiciatis!
-    </p>
-  </PreviewA4>
-);
-
 export const WithAllowOverflow = () => (
   <PreviewA4 allowOverflow>
     <h1>Bonjour à tous</h1>

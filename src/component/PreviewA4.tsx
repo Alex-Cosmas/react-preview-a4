@@ -4,12 +4,17 @@ import useRefDimensions from "../hooks/useRefDimensions";
 export interface PreviewA4Props {
   allowOverflow?: boolean;
   print?: boolean;
-  refresh?: any;
+  refresh?: boolean;
   children: any;
 }
 
 const PreviewA4: React.FC<PreviewA4Props> = (props) => {
-  const { allowOverflow = false, print = false, refresh, children } = props;
+  const {
+    allowOverflow = false,
+    print = false,
+    refresh = false,
+    children,
+  } = props;
 
   const refPreview = useRef<any>(null);
   const refDivTransformed = useRef<HTMLDivElement>(null);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useRefDimensions = (ref: any, reload: any) => {
+const useRefDimensions = (ref: any, refresh: any) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const useRefDimensions = (ref: any, reload: any) => {
     handleRef();
 
     return () => window.removeEventListener("resize", handleRef);
-  }, [ref, reload]);
+  }, [ref, refresh]);
 
   return dimensions;
 };

@@ -5,7 +5,6 @@ import PreviewA4 from "./PreviewA4";
 
 describe("PreviewA4", () => {
   const props: any = {
-    format: true,
     allowOverflow: true,
     print: true,
     children: <h1>Contenu</h1>,
